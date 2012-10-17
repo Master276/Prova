@@ -113,7 +113,7 @@
 			</xsl:copy>
 		</xsl:for-each>
 		<!-- Itinerari consigliati -->
-		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GIGtLQwLEghDYXRlZ29yeRj3qAIM']">
+		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GJrLPQwLEghDYXRlZ29yeRiomQIM']">
 			<xsl:copy>
 			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
 			<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
@@ -180,21 +180,10 @@
 			</xsl:copy>
 		</xsl:for-each>
 		<!-- Dove mangiare -->
-		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GJrLPQwLEghDYXRlZ29yeRjRgwQM']">
+		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GJrLPQwLEghDYXRlZ29yeRjK3AMM']">
 			<xsl:copy>
-			<xsl:attribute name="listtype">-1</xsl:attribute>
-			<xsl:attribute name="stringlisttype">catlist</xsl:attribute>
 			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
-			<xsl:apply-templates select="attribute::* [not(name()='listtype')][not(name()='stringlisttype')][not(name()='parentKey')] | child::* [not(name()='objects')]" />
-			<xsl:element name="categories">
-			<!-- Ristoranti -->
-			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GJrLPQwLEghDYXRlZ29yeRjK3AMM']">
-				<xsl:copy>
-				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GJrLPQwLEghDYXRlZ29yeRjRgwQM</xsl:attribute>
-				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
-				</xsl:copy>
-			</xsl:for-each>
-			</xsl:element>
+			<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 			</xsl:copy>
 		</xsl:for-each>
 		<!-- Hotel con Booking -->
