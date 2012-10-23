@@ -149,6 +149,13 @@
 			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
 			<xsl:apply-templates select="attribute::* [not(name()='listtype')][not(name()='stringlisttype')][not(name()='parentKey')] | child::* [not(name()='objects')]" />
 			<xsl:element name="categories">
+			<!-- Uffici Informazioni Turistiche -->
+			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRiRyAIM']">
+				<xsl:copy>
+				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRjzqwEM</xsl:attribute>
+				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
+				</xsl:copy>
+			</xsl:for-each>
 			<!-- Ospedali -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRi8kQIM']">
 				<xsl:copy>
