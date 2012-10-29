@@ -130,22 +130,20 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
-<!-- Lago d'iseo -->
+		<!-- Lago d'iseo -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GOLlVgwLEghDYXRlZ29yeRiRywEM']">
 				<xsl:copy>
 				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GOLlVgwLEghDYXRlZ29yeRjSDww</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
-			</xsl:element>
-<!-- franciacorta -->
+			<!-- franciacorta -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GOLlVgwLEghDYXRlZ29yeRjyqwEM']">
 				<xsl:copy>
 				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GOLlVgwLEghDYXRlZ29yeRjSDww</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
-			</xsl:element>
 			<!-- sirmione -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GOLlVgwLEghDYXRlZ29yeRiknAEM']">
 				<xsl:copy>
