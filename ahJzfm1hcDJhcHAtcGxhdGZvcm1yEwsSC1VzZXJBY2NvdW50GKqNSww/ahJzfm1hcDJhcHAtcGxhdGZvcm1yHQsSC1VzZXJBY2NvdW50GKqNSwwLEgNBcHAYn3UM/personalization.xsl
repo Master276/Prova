@@ -107,13 +107,7 @@
 				</xsl:copy>
 			</xsl:for-each>
 
-			<!-- trasporti -->
-			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRj5VQw']">
-				<xsl:copy>
-				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIQsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRgJDA</xsl:attribute>
-				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
-				</xsl:copy>
-			</xsl:for-each>
+			
 			<!-- altro -->
 
 			<!-- attvita' -->
@@ -149,6 +143,13 @@
 			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
 			<xsl:apply-templates select="attribute::* [not(name()='listtype')][not(name()='stringlisttype')][not(name()='parentKey')] | child::* [not(name()='objects')]" />
 			<xsl:element name="categories">
+<!-- trasporti -->
+			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRj5VQw']">
+				<xsl:copy>
+				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRjzqwEM</xsl:attribute>
+				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
+				</xsl:copy>
+			</xsl:for-each>
 			<!-- Uffici Informazioni Turistiche -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRiRyAIM']">
 				<xsl:copy>
