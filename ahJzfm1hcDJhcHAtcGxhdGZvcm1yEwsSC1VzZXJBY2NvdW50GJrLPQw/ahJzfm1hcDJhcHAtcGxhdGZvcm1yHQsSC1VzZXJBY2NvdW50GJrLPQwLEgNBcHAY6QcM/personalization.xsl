@@ -12,7 +12,7 @@
 	
 	<!-- Configure shortName for submission on Android -->
 	<xsl:template match="//application[1]/@shortName">
-		<xsl:attribute name="shortName">madridlaveraguidautileancheconaudio</xsl:attribute>
+		<xsl:attribute name="shortName">Madridlaveraguidautileancheconaudio</xsl:attribute>
 	</xsl:template>
 	
 	<xsl:template match="categories/category[@key='root']/categories">

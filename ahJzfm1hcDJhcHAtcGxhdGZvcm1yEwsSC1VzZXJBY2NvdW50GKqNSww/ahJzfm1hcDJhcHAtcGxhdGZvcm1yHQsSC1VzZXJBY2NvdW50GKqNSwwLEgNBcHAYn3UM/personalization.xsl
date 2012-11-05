@@ -10,6 +10,11 @@
 		</xsl:copy>
 	</xsl:template>
 	
+	<!-- Configure shortName for submission on Android -->
+	<xsl:template match="//application[1]/@shortName">
+		<xsl:attribute name="shortName">Venezialaveraguidautileancheconaudio</xsl:attribute>
+	</xsl:template>
+	
 	<xsl:template match="categories/category[@key='root']/categories">
 		<xsl:copy>
 		<xsl:apply-templates select="attribute::*" />
