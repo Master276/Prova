@@ -119,7 +119,7 @@
 		<!-- Storie  -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GLuNXAwLEghDYXRlZ29yeRjejAEM']">
 				<xsl:copy>
-				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GOLlVgwLEghDYXRlZ29yeRjJZQw</xsl:attribute>
+				<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
@@ -128,7 +128,7 @@
 		<!-- Itinerari -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLuNXAwLEghDYXRlZ29yeRjZNgw']">
 				<xsl:copy>
-				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GOLlVgwLEghDYXRlZ29yeRjJZQw</xsl:attribute>
+				<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
@@ -136,7 +136,7 @@
 		<!-- Fuori porta -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLuNXAwLEghDYXRlZ29yeRjxLgw']">
 				<xsl:copy>
-				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GOLlVgwLEghDYXRlZ29yeRjJZQw</xsl:attribute>
+				<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
