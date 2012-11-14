@@ -193,6 +193,8 @@
 				</xsl:copy>
 			</xsl:for-each>
 		</xsl:element>
+		</xsl:copy>
+		</xsl:for-each>
 		
 		<!-- Come Muoversi -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GLuNXAwLEghDYXRlZ29yeRiiHww']">
