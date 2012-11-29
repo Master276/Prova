@@ -12,7 +12,7 @@
 	
 	<!-- remove Le mappe offline when there is an iphone -->
 	<xsl:template match="//object[title='Le Mappe Offline']">
-	<xsl:if test="not(/userAccount/application/@exportType='iphone')">
+	<xsl:if test="not(/userAccount/application/@exportType='iphone' or /userAccount/application/@exportType='appreview')">
 		<xsl:copy>
 			<xsl:apply-templates select="attribute::* | child::*" />
 		</xsl:copy>
