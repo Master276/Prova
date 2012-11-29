@@ -4,10 +4,19 @@
 	<xsl:output method="xml" version="1.0" encoding="utf-8" indent="yes" />
 	<!-- Verona WeaGoo -->
 	<!-- Starting template to generate all the other structures -->
-<xsl:template match="@*|node()">
+	<xsl:template match="@*|node()">
 		<xsl:copy>
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:copy>
+	</xsl:template>
+	
+	<!-- remove Le mappe offline when there is an iphone -->
+	<xsl:template match="//object[title='Le Mappe Offline']">
+	<xsl:if test="not(/userAccount/application/@exportType='iphone')">
+		<xsl:copy>
+			<xsl:apply-templates select="attribute::* | child::*" />
+		</xsl:copy>
+	</xsl:if>
 	</xsl:template>
 	
 	<xsl:template match="categories/category[@key='root']/categories">
