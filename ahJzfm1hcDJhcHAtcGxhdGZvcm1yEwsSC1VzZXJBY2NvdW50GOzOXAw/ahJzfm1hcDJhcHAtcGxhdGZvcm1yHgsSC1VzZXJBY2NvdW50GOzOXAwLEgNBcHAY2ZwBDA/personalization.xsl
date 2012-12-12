@@ -124,6 +124,14 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
+			
+				<!-- luoghi storici -->
+			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GOzOXAwLEghDYXRlZ29yeRjpgQIM']">
+				<xsl:copy>
+				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GOzOXAwLEghDYXRlZ29yeRixbQw</xsl:attribute>
+				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
+				</xsl:copy>
+			</xsl:for-each>
 
 
 
