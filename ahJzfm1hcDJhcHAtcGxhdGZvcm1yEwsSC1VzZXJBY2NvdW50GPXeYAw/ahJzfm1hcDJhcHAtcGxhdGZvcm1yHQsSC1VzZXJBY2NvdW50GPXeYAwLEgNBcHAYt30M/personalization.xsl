@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-	<xsl:output method="xml" version="1.0" encoding="utf-8" indent="yes" />
-	<!-- Copenaghen WeaGoo -->
+  <xsl:output method="xml" version="1.0" encoding="utf-8" indent="yes" />
+	<!-- Parigi WeaGoo -->
 	<!-- Starting template to generate all the other structures -->
 	<xsl:template match="@*|node()">
 		<xsl:copy>
@@ -82,7 +82,7 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
-			
+
 			<!-- parchi giardini -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GPXeYAwLEghDYXRlZ29yeRjiXQw']">
 				<xsl:copy>
