@@ -14,6 +14,23 @@
 	<xsl:template match="//application[1]/@shortName">
 		<xsl:attribute name="shortName">Parigiunaguidautile</xsl:attribute>
 	</xsl:template>
+	
+	<!-- fix problem with logo in the application -->
+	<xsl:template match="//application[1]/logo/full/@shortName">
+		<xsl:attribute name="shortName">ftOP9raKwVgdo6tEHbwfRpCRYM4ULUwNjYK6LixF1lDTI3q2L3BJJxA2ZtFxa1aK1VsL--vrRIE7yGqbwRunZ9NBNDZ_ag</xsl:attribute>
+	</xsl:template>
+	<xsl:template match="//application[1]/logo/full"><xsl:copy><xsl:apply-templates select="attribute::*" />http://lh3.ggpht.com/ftOP9raKwVgdo6tEHbwfRpCRYM4ULUwNjYK6LixF1lDTI3q2L3BJJxA2ZtFxa1aK1VsL--vrRIE7yGqbwRunZ9NBNDZ_ag</xsl:copy>
+	</xsl:template>
+
+	<!-- fix problem with logo in one object -->
+	<xsl:template match="//object[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yMAsSC1VzZXJBY2NvdW50GPXeYAwLEghDYXRlZ29yeRikfQwLEgdDb250ZW50GLwQDA']/icon">
+		<icon type="image">
+			<full extension="png" contentType="image/png" source="blobstore" 
+			shortName="ftOP9raKwVgdo6tEHbwfRpCRYM4ULUwNjYK6LixF1lDTI3q2L3BJJxA2ZtFxa1aK1VsL--vrRIE7yGqbwRunZ9NBNDZ_ag">http://lh3.ggpht.com/ftOP9raKwVgdo6tEHbwfRpCRYM4ULUwNjYK6LixF1lDTI3q2L3BJJxA2ZtFxa1aK1VsL--vrRIE7yGqbwRunZ9NBNDZ_ag</full>
+			<square extension="png" contentType="image/png" source="blobstore" 
+			shortName="ftOP9raKwVgdo6tEHbwfRpCRYM4ULUwNjYK6LixF1lDTI3q2L3BJJxA2ZtFxa1aK1VsL--vrRIE7yGqbwRunZ9NBNDZ_ag">http://lh3.ggpht.com/ftOP9raKwVgdo6tEHbwfRpCRYM4ULUwNjYK6LixF1lDTI3q2L3BJJxA2ZtFxa1aK1VsL--vrRIE7yGqbwRunZ9NBNDZ_ag</square>
+		</icon>
+	</xsl:template>
 
 	<xsl:template match="categories/category[@key='root']/categories">
 		<xsl:copy>
