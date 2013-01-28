@@ -119,6 +119,20 @@
 			</xsl:element>
 			</xsl:copy>
 		</xsl:for-each>
+		<!-- storie -->
+		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRiLmwQM']">
+			<xsl:copy>
+			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
+			<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
+			</xsl:copy>
+		</xsl:for-each>
+		<!-- itinerari -->
+		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRjp-AQM']">
+			<xsl:copy>
+			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
+			<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
+			</xsl:copy>
+		</xsl:for-each>
 		<!-- Fuori porta -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIQsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRgHDA']">
 			<xsl:copy>
@@ -129,8 +143,26 @@
 		<!-- Cosa fare -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIQsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRgGDA']">
 			<xsl:copy>
+			<xsl:attribute name="listtype">-1</xsl:attribute>
+			<xsl:attribute name="stringlisttype">catlist</xsl:attribute>
 			<xsl:attribute name="parentKey"><xsl:value-of select="../../@key"/></xsl:attribute>
-			<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
+			<xsl:apply-templates select="attribute::* [not(name()='listtype')][not(name()='stringlisttype')][not(name()='parentKey')] | child::* [not(name()='objects')]" />
+			<xsl:element name="categories">
+			<!-- palazzi -->
+			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRjM3AMM']">
+				<xsl:copy>
+				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIQsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRgGDA</xsl:attribute>
+				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
+				</xsl:copy>
+			</xsl:for-each>
+			<!-- chiese -->
+			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRi05AMM']">
+				<xsl:copy>
+				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIQsSC1VzZXJBY2NvdW50GKqNSwwLEghDYXRlZ29yeRgGDA</xsl:attribute>
+				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
+				</xsl:copy>
+			</xsl:for-each>
+			</xsl:element>
 			</xsl:copy>
 		</xsl:for-each>
 		<!-- Come muoversi -->
