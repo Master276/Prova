@@ -146,7 +146,7 @@
 			</xsl:element>
 			</xsl:copy>
 		</xsl:for-each>
-			
+
 			<!-- storie -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRilHww']">
 			<xsl:copy>
@@ -169,8 +169,8 @@
 			</xsl:copy>
 		</xsl:for-each>
 
-		<!-- cosa vedere -->
-		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRimHww']">
+		<!-- le città -->
+		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRjCPgw']">
 			<xsl:copy>
 			<xsl:attribute name="listtype">-1</xsl:attribute>
 			<xsl:attribute name="stringlisttype">catlist</xsl:attribute>
@@ -180,46 +180,46 @@
 			<!-- palazzi -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRjk2gEM']">
 				<xsl:copy>
-				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRimHww</xsl:attribute>
+				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRjCPgw</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
 			<!-- chiese -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRj70gEM']">
 				<xsl:copy>
-				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRimHww</xsl:attribute>
+				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRjCPgw</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
 			<!-- vie -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRipwwEM']">
 				<xsl:copy>
-				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRimHww</xsl:attribute>
+				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRjCPgw</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
 			<!-- musei -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRjL4gEM']">
 				<xsl:copy>
-				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRimHww</xsl:attribute>
+				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRjCPgw</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
 			<!-- strutture -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRjxqAIM']">
 				<xsl:copy>
-				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRimHww</xsl:attribute>
+				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRjCPgw</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
 			<!-- monumenti -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIwsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRib8gEM']">
 				<xsl:copy>
-				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRimHww</xsl:attribute>
+				<xsl:attribute name="parentKey">ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRjCPgw</xsl:attribute>
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
-			
+
 			</xsl:element>
 			</xsl:copy>
 		</xsl:for-each>
@@ -253,6 +253,10 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
+
+			</xsl:element>
+			</xsl:copy>
+		</xsl:for-each>
 			<!-- musei -->
 			<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRiZdQw']">
 				<xsl:copy>
@@ -260,11 +264,9 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
+
+
 			
-			
-			</xsl:element>
-			</xsl:copy>
-		</xsl:for-each>
 
 		<!-- cosa fare -->
 		<xsl:for-each select="//category[@key='ahJzfm1hcDJhcHAtcGxhdGZvcm1yIgsSC1VzZXJBY2NvdW50GJ_IYAwLEghDYXRlZ29yeRjDPgw']">
@@ -330,8 +332,8 @@
 				<xsl:apply-templates select="attribute::* [not(name()='parentKey')] | child::* " />
 				</xsl:copy>
 			</xsl:for-each>
-			
-			
+
+
 			</xsl:element>
 			</xsl:copy>
 		</xsl:for-each>
